@@ -97,6 +97,10 @@ func (s *lwdStreamer) dailyActiveBlock(height uint64, peerip string) {
 	}
 }
 
+func (s *lwdStreamer) GetZECPrice(ctx context.Context, in *walletrpc.PriceRequest) (*walletrpc.PriceResponse, error) {
+	return nil, errors.New("not implemented")
+}
+
 // GetLatestBlock returns the height of the best chain, according to zcashd.
 func (s *lwdStreamer) GetLatestBlock(ctx context.Context, placeholder *walletrpc.ChainSpec) (*walletrpc.BlockID, error) {
 	result, rpcErr := common.RawRequest("getblockchaininfo", []json.RawMessage{})
