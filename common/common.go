@@ -191,7 +191,7 @@ func GetLightdInfo() (*walletrpc.LightdInfo, error) {
 	}
 	// If the sapling consensus branch doesn't exist, it must be regtest
 	var saplingHeight int
-	if saplingJSON, ok := getblockchaininfoReply.Upgrades["76b809bb"]; ok { // Sapling ID
+	if saplingJSON, ok := getblockchaininfoReply.Upgrades["7a737763"]; ok { // Sapling ID
 		saplingHeight = saplingJSON.ActivationHeight
 	}
 
